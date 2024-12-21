@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись на прием</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background: linear-gradient(to bottom, #6a11cb, #2575fc);
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    h1 {
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+    .container {
+        max-width: 500px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+    .container header {
+        background: #2575fc;
+        padding: 20px;
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .form-group {
+        padding: 15px 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        font-size: 0.9em;
+        color: #333;
+    }
+    input[type="text"],
+    input[type="datetime-local"],
+    select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1em;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+    input:focus,
+    select:focus {
+        border-color: #2575fc;
+        outline: none;
+        box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #2575fc;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    button:hover {
+        background: #1a5bb8;
+    }
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background: #f4f4f4;
+        color: #666;
+        font-size: 0.9em;
+    }
+    @media (max-width: 576px) {
+        .container {
+            margin: 20px;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        button {
+            font-size: 1em;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Запись на прием</h1>
+<div class="container">
+  <header>Форма записи</header>
+  <form action="#" th:action="@{/appointments}" method="post">
+    <div class="form-group">
+      <label for="service_id">Услуга</label>
+      <select id="service_id" name="service_id" required>
+        <option value="">Выберите услугу</option>
+        <option value="1">Услуга 1</option>
+        <option value="2">Услуга 2</option>
+        <option value="3">Услуга 3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="client_name">Имя клиента</label>
+      <input type="text" id="client_name" name="client_name" placeholder="Введите ваше имя" required>
+    </div>
+    <div class="form-group">
+      <label for="appointments_time">Время приема</label>
+      <input type="datetime-local" id="appointments_time" name="appointments_time" required>
+    </div>
+    <div class="form-group">
+      <label for="status">Статус</label>
+      <input type="text" id="status" name="status" placeholder="Введите статус" required>
+    </div>
+    <button type="submit">Записаться</button>
+  </form>
+</div>
+<footer>© 2024 Все права защищены</footer>
+
+</body>
+</html>

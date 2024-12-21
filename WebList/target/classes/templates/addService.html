@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись на услугу</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+    select, input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #5cb85c;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #4cae4c;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1><i class="fas fa-calendar-alt"></i> Запись на услугу</h1>
+  <form action="#" th:action="@{/addService}" method="post">
+
+    <div class="form-group">
+      <label for="name">Выберите услугу:</label>
+      <select id="name" name="name" required>
+        <option value="">-- Выберите услугу --</option>
+        <option value="brows">Брови</option>
+        <option value="lashes">Ресницы</option>
+        <option value="manicure">Маникюр</option>
+        <option value="pedicure">Педикюр</option>
+        <!-- Добавьте другие услуги по необходимости -->
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="duration">Выберите время:</label>
+      <select id="duration" name="duration" required>
+        <option value="">-- Выберите время --</option>
+        <option value="14:00">14:00</option>
+        <option value="15:00">15:00</option>
+        <option value="16:00">16:00</option>
+        <option value="17:00">17:00</option>
+        <!-- Добавьте другие временные слоты по необходимости -->
+      </select>
+    </div>
+    <button type="submit">Записаться</button>
+  </form>
+</div>
+
+<div class="footer">
+  &copy; 2025 Ваше название компании. Все права защищены.
+</div>
+
+</body>
+</html>

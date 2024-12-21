@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон красоты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Общий стиль */
+        body {
+          font-family: 'Roboto', Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          color: #333;
+          background: #f8f9fa;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        a:hover {
+          color: #ff6f61;
+        }
+
+        /* Шапка */
+        header {
+          background: #ff6f61;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+        }
+        header h1 {
+          font-size: 2.5em;
+          margin: 0;
+          font-weight: 700;
+        }
+        header p {
+          font-size: 1.2em;
+          margin: 5px 0 0;
+        }
+
+        /* Навигация */
+        nav {
+          display: flex;
+          justify-content: center;
+          background: white;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+          list-style: none;
+          display: flex;
+          padding: 10px 0;
+          margin: 0;
+        }
+        nav ul li {
+          margin: 0 15px;
+        }
+        nav ul li a {
+          font-size: 1em;
+          color: #333;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+          color: #ff6f61;
+        }
+
+        /* Герой-блок */
+        .hero {
+          background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+          height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          text-align: center;
+          padding: 0 20px;
+        }
+        .hero h2 {
+          font-size: 3em;
+          margin: 0;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+          font-size: 1.2em;
+          margin-top: 15px;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero button {
+          background: #ff6f61;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1.2em;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+          transition: background 0.3s ease;
+        }
+        .hero button:hover {
+          background: #e05648;
+        }
+
+        /* Раздел услуг */
+        .services {
+          padding: 40px 20px;
+          text-align: center;
+        }
+        .services h2 {
+          font-size: 2.2em;
+          color: #333;
+          margin-bottom: 20px;
+        }
+        .services .service-list {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+        .service-item {
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          width: 280px;
+          text-align: center;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-item:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .service-item img {
+          width: 100px;
+          margin-bottom: 15px;
+        }
+        .service-item h3 {
+          font-size: 1.5em;
+          margin: 0 0 10px;
+          color: #333;
+        }
+        .service-item p {
+          font-size: 1em;
+          margin: 0;
+          color: #666;
+        }
+
+        /* Подвал */
+        footer {
+          background: #333;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+          font-size: 0.9em;
+        }
+        footer a {
+          color: #ff6f61;
+          text-decoration: none;
+        }
+        footer a:hover {
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Салон красоты</h1>
+    <p>Маникюр • Брови • Косметология</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#contact">Контакты</a></li>
+        <li><a href="/appointments" class="btn">Запись</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div>
+        <h2>Будьте неотразимы каждый день</h2>
+        <p>Индивидуальный подход к каждому клиенту</p>
+        <button>Записаться на прием</button>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Наши услуги</h2>
+    <div class="service-list">
+        <div class="service-item">
+            <img src="https://via.placeholder.com/100" alt="Маникюр">
+            <h3>Маникюр</h3>
+            <p>Красивые и ухоженные ногти</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/100" alt="Брови">
+            <h3>Брови</h3>
+            <p>Идеальная форма и цвет</p>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/100" alt="Косметология">
+            <h3>Косметология</h3>
+            <p>Уход за кожей лица и тела</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 Салон красоты. Все права защищены. | <a href="#privacy">Политика конфиденциальности</a></p>
+</footer>
+
+</body>
+</html>
