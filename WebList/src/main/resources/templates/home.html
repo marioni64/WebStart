@@ -8,157 +8,207 @@
     <style>
         /* Общий стиль */
         body {
-          font-family: 'Roboto', Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-          color: #333;
-          background: #f8f9fa;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f8f9fa;
         }
         a {
-          text-decoration: none;
-          color: inherit;
+            text-decoration: none;
+            color: inherit;
         }
         a:hover {
-          color: #ff6f61;
+            color: #ff6f61;
         }
 
         /* Шапка */
         header {
-          background: #ff6f61;
-          color: white;
-          padding: 20px 0;
-          text-align: center;
+            background: #ff6f61;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
         header h1 {
-          font-size: 2.5em;
-          margin: 0;
-          font-weight: 700;
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
         }
         header p {
-          font-size: 1.2em;
-          margin: 5px 0 0;
+            font-size: 1.2em;
+            margin: 5px 0 0;
         }
 
         /* Навигация */
         nav {
-          display: flex;
-          justify-content: center;
-          background: white;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         nav ul {
-          list-style: none;
-          display: flex;
-          padding: 10px 0;
-          margin: 0;
+            list-style: none;
+            display: flex;
+            padding: 10px 0;
+            margin: 0;
         }
         nav ul li {
-          margin: 0 15px;
+            margin: 0 15px;
         }
         nav ul li a {
-          font-size: 1em;
-          color: #333;
-          font-weight: bold;
-          transition: color 0.3s ease;
+            font-size: 1em;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
         }
         nav ul li a:hover {
-          color: #ff6f61;
+            color: #ff6f61;
         }
 
         /* Герой-блок */
         .hero {
-          background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
-          height: 60vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          text-align: center;
-          padding: 0 20px;
+            background: url('https://via.placeholder.com/1920x800') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
         }
         .hero h2 {
-          font-size: 3em;
-          margin: 0;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .hero p {
-          font-size: 1.2em;
-          margin-top: 15px;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 1.2em;
+            margin-top: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .hero button {
-          background: #ff6f61;
-          color: white;
-          border: none;
-          padding: 10px 20px;
-          font-size: 1.2em;
-          border-radius: 5px;
-          cursor: pointer;
-          margin-top: 20px;
-          transition: background 0.3s ease;
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease;
         }
         .hero button:hover {
-          background: #e05648;
+            background: #e05648;
         }
 
         /* Раздел услуг */
         .services {
-          padding: 40px 20px;
-          text-align: center;
+            padding: 40px 20px;
+            text-align: center;
         }
         .services h2 {
-          font-size: 2.2em;
-          color: #333;
-          margin-bottom: 20px;
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 20px;
         }
         .services .service-list {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .service-item {
-          background: white;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: 20px;
-          width: 280px;
-          text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .service-item:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .service-item img {
-          width: 100px;
-          margin-bottom: 15px;
+            width: 100px;
+            margin-bottom: 15px;
         }
         .service-item h3 {
-          font-size: 1.5em;
-          margin: 0 0 10px;
-          color: #333;
+            font-size: 1.5em;
+            margin: 0 0 10px;
+            color: #333;
         }
         .service-item p {
-          font-size: 1em;
-          margin: 0;
-          color: #666;
+            font-size: 1em;
+            margin: 0;
+            color: #666;
+        }
+
+        /* Регистрация */
+        .register {
+            padding: 40px 20px;
+            text-align: center;
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 400px;
+        }
+        .register h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .form-group label {
+            font-size: 1em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background: #e05648;
         }
 
         /* Подвал */
         footer {
-          background: #333;
-          color: white;
-          padding: 20px 0;
-          text-align: center;
-          font-size: 0.9em;
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
         }
         footer a {
-          color: #ff6f61;
-          text-decoration: none;
+            color: #ff6f61;
+            text-decoration: none;
         }
         footer a:hover {
-          text-decoration: underline;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -172,7 +222,7 @@
 <nav>
     <ul>
         <li><a href="#services">Услуги</a></li>
-        <li><a href="#about">О нас</a></li>
+        <li><a href="#register">Регистрация</a></li>
         <li><a href="#contact">Контакты</a></li>
         <li><a href="/appointments" class="btn">Запись</a></li>
     </ul>
@@ -205,6 +255,25 @@
             <p>Уход за кожей лица и тела</p>
         </div>
     </div>
+</section>
+
+<section id="register" class="register">
+    <h2>Регистрация</h2>
+    <form action="/register" method="POST" class="register-form">
+        <div class="form-group">
+            <label for="username">Имя пользователя</label>
+            <input type="text" id="username" name="username" placeholder="Введите ваше имя" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" name="email" placeholder="Введите вашу почту" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Пароль</label>
+            <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+        </div>
+        <button type="submit">Зарегистрироваться</button>
+    </form>
 </section>
 
 <footer>
