@@ -86,7 +86,8 @@
             margin-top: 15px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .hero button {
+        .hero .hero-btn {
+            display: inline-block;
             background: #ff6f61;
             color: white;
             border: none;
@@ -94,10 +95,10 @@
             font-size: 1.2em;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
+            text-decoration: none;
             transition: background 0.3s ease;
         }
-        .hero button:hover {
+        .hero .hero-btn:hover {
             background: #e05648;
         }
 
@@ -224,7 +225,7 @@
         <li><a href="#services">Услуги</a></li>
         <li><a href="#register">Регистрация</a></li>
         <li><a href="#contact">Контакты</a></li>
-        <li><a href="/appointments" class="btn">Запись</a></li>
+        <li><a href="#register" class="btn">Запись</a></li>
     </ul>
 </nav>
 
@@ -232,7 +233,7 @@
     <div>
         <h2>Будьте неотразимы каждый день</h2>
         <p>Индивидуальный подход к каждому клиенту</p>
-        <button>Записаться на прием</button>
+        <a href="#register" class="hero-btn">Записаться на прием</a>
     </div>
 </section>
 
@@ -272,7 +273,11 @@
             <label for="password">Пароль</label>
             <input type="password" id="password" name="password" placeholder="Введите пароль" required>
         </div>
-        <button type="submit">Зарегистрироваться</button>
+        <!-- Кнопки регистрации и перехода на страницу входа -->
+        <div class="buttons-container">
+            <button type="submit">Зарегистрироваться</button>
+            <a href="/login">Войти</a>
+        </div>
     </form>
 </section>
 
